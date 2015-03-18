@@ -16,10 +16,7 @@ def mood(text=""):
         proxy.Invoke('NAME skype_clementine.py')
         proxy.Invoke('PROTOCOL 2')
 
-        if text=="":
-            command = 'GET PROFILE MOOD_TEXT'
-        else:
-            command = 'SET PROFILE MOOD_TEXT %s' % text
+        command = 'SET PROFILE MOOD_TEXT %s' % text
 
         return proxy.Invoke(command)
 
